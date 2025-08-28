@@ -1,3 +1,13 @@
+Username: admin 
+Password: admin
+
+Frontend:
+1. in environment.ts file, replace the localhost url
+2. npm install
+3. In front end you can upload file, View all account balances and for reports you can view hitory of individual accounts by clicking on accounts.
+4. Project has created with Angular 15
+
+
 # AdraAccountbalanceClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
