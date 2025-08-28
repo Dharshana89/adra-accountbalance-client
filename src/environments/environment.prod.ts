@@ -1,4 +1,4 @@
 export const environment = {
     isProduction: true,
-    apiUrl: 'https://jcacc.azurewebsites.net'
+    apiUrl: 'adraapi-egcpanddcubucje5.canadacentral-01.azurewebsites.net'
   };
