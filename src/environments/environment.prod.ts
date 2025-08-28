@@ -1,4 +1,4 @@
 export const environment = {
     isProduction: true,
-    apiUrl: 'adraapi-egcpanddcubucje5.canadacentral-01.azurewebsites.net'
+    apiUrl: 'https://adraapi-egcpanddcubucje5.canadacentral-01.azurewebsites.net'
   };
