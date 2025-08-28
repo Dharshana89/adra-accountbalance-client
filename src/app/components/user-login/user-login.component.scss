@@ -1,0 +1,54 @@
+.login-wrapper {
+    background: #6372ff;
+    background: linear-gradient(135deg, #6372ff, #4f5bff);
+    height: 100vh;
+  
+    .login-card {
+      background: #2e3aeb;
+      width: 400px;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      color: #fff;
+  
+      .login-icon {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+  
+      .form-control {
+        border-radius: 50px;
+        height: 45px;
+        padding-left: 1.5rem;
+        border: none;
+      }
+  
+      .btn-primary {
+        background-color: #fff;
+        color: #2e3aeb;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: 0.3s;
+  
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+  
+      .forgot-link {
+        color: #f1f1f1;
+        text-decoration: underline;
+        font-size: 0.9rem;
+  
+        &:hover {
+          color: #fff;
+        }
+      }
+  
+      .invalid-feedback {
+        color: #ff6b6b;
+        font-size: 0.85rem;
+      }
+    }
+  }
+  

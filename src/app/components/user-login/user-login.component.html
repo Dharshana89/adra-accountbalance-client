@@ -1,0 +1,61 @@
+<div class="login-wrapper d-flex justify-content-center align-items-center vh-100">
+    <div class="login-card p-5 rounded">
+      <!-- Optional logo/icon -->
+      <div class="text-center mb-4">
+        <i class="bi bi-cart-arrow-up login-icon"></i>
+      </div>
+  
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+        <!-- Username -->
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            required
+            [(ngModel)]="loginModel.Username"
+            name="username"
+            #username="ngModel"
+            [ngClass]="{'is-invalid': username.invalid && (username.dirty || username.touched)}"
+          />
+          <div *ngIf="username.invalid && (username.dirty || username.touched)" class="invalid-feedback">
+            Username is required
+          </div>
+        </div>
+  
+        <!-- Password -->
+        <div class="mb-4">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            required
+            [(ngModel)]="loginModel.Password"
+            name="password"
+            #password="ngModel"
+            [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched)}"
+          />
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+            Password is required
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid || loading">
+          <span *ngIf="!loading">LOGIN</span>
+          <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+        </button>
+  
+        <!-- Forgot password -->
+        <div class="text-center mt-3">
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+  
+        <!-- Error Message -->
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3 text-center">
+          {{ errorMessage }}
+        </div>
+      </form>
+    </div>
+  </div>
+  

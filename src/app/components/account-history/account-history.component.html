@@ -1,0 +1,52 @@
+<div class="balance-overview container py-5">
+  <h2 class="text-center mb-5 fw-bold text-primary">Account History Overview</h2>
+
+  <!-- Loading spinner -->
+  <div *ngIf="loading" class="d-flex justify-content-center align-items-center py-5">
+    <div class="spinner-border text-primary me-3" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mb-0 fw-semibold fs-5">Loading history...</p>
+  </div>
+
+  <!-- History Cards -->
+  <div *ngIf="!loading && accounts?.length" class="row g-4">
+    <div *ngFor="let history of accounts" class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0 transition-hover">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div class="mb-3">
+            <h5 class="card-title fw-bold text-dark">
+              {{ history.year }}/{{ history.month }}
+            </h5>
+            <p class="card-text fs-4 fw-semibold"
+              [ngClass]="{
+                'text-success': history.changeAmount >= 0,
+                'text-danger': history.changeAmount < 0
+              }">
+              {{ history.changeAmount | currency: 'Rs ' }}
+            </p>
+          </div>
+
+          <div class="mt-auto">
+            <p><span 
+              class="badge rounded-pill bg-info text-dark fs-6 px-3 py-2 mb-2 d-block" >
+              {{ history.note || 'No note provided' }}
+            </span></p>
+            
+
+            <span class="badge rounded-pill bg-light text-muted fs-6 px-3 py-2 d-block" style="background:aqua">
+              <i class="bi bi-person-circle me-1" ></i>
+              {{ history.addedBy }} on {{ history.addedOn | date: 'mediumDate' }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- No history available -->
+  <div *ngIf="!loading && !accounts?.length" class="text-center py-5">
+    <i class="bi bi-wallet2 fs-1 text-muted mb-3"></i>
+    <p class="fs-5 text-muted">No account history found.</p>
+  </div>
+</div>

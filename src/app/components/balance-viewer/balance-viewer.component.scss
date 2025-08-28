@@ -1,0 +1,77 @@
+.balance-overview {
+  h2 {
+    color: #0d6efd; // Bootstrap primary
+    font-weight: 700;
+  }
+
+  .loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+
+  .row {
+    margin-top: 1rem;
+  }
+
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 150px;
+
+      .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .text-success {
+    color: #198754 !important; // Bootstrap green
+  }
+
+  .text-danger {
+    color: #dc3545 !important; // Bootstrap red
+  }
+
+  .no-balances {
+    text-align: center;
+    padding: 5rem 0;
+    color: #6c757d; // muted
+    i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

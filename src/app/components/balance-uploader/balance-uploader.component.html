@@ -1,0 +1,11 @@
+<div class="upload-container">
+    <h2>Upload Account Balance File</h2>
+  
+    <label class="upload-box">
+      <i class="fas fa-file-upload upload-icon"></i>
+      <span>Select a file to upload</span>
+      <input type="file" (change)="onFileSelected($event)" hidden />
+    </label>
+  
+    <button class="upload-button" (click)="onUpload()">Upload</button>
+  </div>
